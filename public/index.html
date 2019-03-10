@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link href="style.css" rel="stylesheet" />
+  </head>
+
+  <center>
+    <body>
+      <!--Elements for Random Noun Generator-->
+      <h1 id="nounTitle"></h1>
+      <div class="form-group">
+        <div id="container">
+          <label> Amount:&nbsp; </label
+          ><input
+            style="width: 5em;"
+            class="form-control"
+            type="number"
+            id="amount"
+            value="4"
+            max="10"
+          />
+        </div>
+
+        <button class="btn btn-default" id="btnsend">Get nouns</button>
+
+        <div class="col-md-3">
+          <table id="tbl" class="table">
+            <thead>
+              <th>Noun</th>
+            </thead>
+            <!-- >TODO: Dynamically create the rows with data fetched from the API, and insert into the table here -->
+            <tbody id="tbody"></tbody>
+          </table>
+        </div>
+
+        <!--Elements for Random First Name Generator-->
+
+        <h1 id="personTitle"></h1>
+
+        <div class="form-group">
+          <div id="container">
+            <label> Amount:&nbsp; </label
+            ><input
+              style="width: 5em;"
+              class="form-control"
+              type="number"
+              id="amountp"
+              value="2"
+              max="10"
+            />
+          </div>
+
+          <button class="btn btn-default" id="btnperson">Get names</button>
+
+          <div class="col-md-3">
+            <table id="tblperson" class="table">
+              <thead>
+                <th>Person</th>
+              </thead>
+              <!-- >TODO: Dynamically create the rows with data fetched from the API, and insert into the table here -->
+              <tbody id="tbodyperson"></tbody>
+            </table>
+          </div>
+
+          <div class="col-md-6">
+            <p>Copy SQL into clipboard from below:</p>
+            <button class="btn btn-default" id="btnsql">Get SQL...</button>
+            <!-- TODO: Create the necessary SQL-script to insert all data fetched from the API, into a table with matching colums -->
+            <textarea readonly id="sql" style="width: 100%" rows="6"></textarea>
+          </div>
+        </div>
+      </div>
+
+      <script src="bundle.js"></script>
+    </body>
+  </center>
+</html>
